@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>PrepMed | CBT Exam Registration Portal</title>
+<meta name="description" content="PrepMed CBT Exam Registration Portal — register, pay, and take computer-based tests. For internal and external medical aspirants." />
+
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+<link rel="stylesheet" href="css/style.css" />
+<noscript><style>.reveal{opacity:1!important;transform:none!important;}</style></noscript>
+</head>
+<body>
+
+<!-- Scroll progress bar -->
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- ===================== HEADER ===================== -->
+<header class="navbar" id="navbar">
+  <div class="container navbar-inner">
+    <a href="#home" class="logo">
+      <img src="assets/logo.webp" alt="PrepMed logo" class="logo-img" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'logo-fallback',innerHTML:'<span class=\'logo-fallback-icon\'><i class=\'fa-solid fa-graduation-cap\'></i></span><span class=\'logo-fallback-text\'>PREP<b>MED</b></span>'}))" />
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#features" class="nav-link">Features</a>
+      <a href="#fees" class="nav-link">Fees</a>
+      <a href="#exams" class="nav-link">Exams</a>
+      <a href="#results" class="nav-link">Results</a>
+      <a href="#portal" class="nav-link nav-cta-mobile">Login / Register</a>
+    </nav>
+
+    <a href="#portal" class="btn btn-primary nav-cta">
+      <i class="fa-solid fa-right-to-bracket"></i> Student Portal
+    </a>
+
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <!-- ===================== HERO ===================== -->
+  <section id="home" class="hero">
+    <div class="hero-blob blob-1" data-speed="0.15"></div>
+    <div class="hero-blob blob-2" data-speed="0.3"></div>
+    <div class="hero-blob blob-3" data-speed="0.08"></div>
+    <div class="hero-grid"></div>
+
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <span class="eyebrow eyebrow-live reveal"><span class="live-dot"></span>Registrations open · CBT Season 2026</span>
+        <h1 class="hero-title">
+          <span class="reveal-line"><span>The Official</span></span>
+          <span class="reveal-line"><span class="text-accent">CBT Exam Registration</span></span>
+          <span class="reveal-line"><span>Portal for PrepMed</span></span>
+        </h1>
+        <p class="hero-sub reveal">
+          Register, pay exam fees, attempt computer-based tests and view your results —
+          built for both <strong>internal</strong> and <strong>external</strong> medical aspirants,
+          in one secure, streamlined portal.
+        </p>
+        <div class="hero-actions reveal">
+          <a href="#portal" class="btn btn-primary btn-lg">
+            <i class="fa-solid fa-user-graduate"></i> Student Login
+          </a>
+          <a href="#portal" class="btn btn-outline btn-lg" data-tab-open="register">
+            <i class="fa-solid fa-pen-to-square"></i> Register Now
+          </a>
+        </div>
+        <div class="hero-trust reveal">
+          <div class="trust-item"><i class="fa-solid fa-shield-halved"></i> Secure Payments</div>
+          <div class="trust-item"><i class="fa-solid fa-bolt"></i> Instant Results</div>
+          <div class="trust-item"><i class="fa-solid fa-headset"></i> 24/7 Support</div>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="floaty-card dashboard-card browser-frame">
+          <div class="browser-bar">
+            <span class="browser-dot dot-red"></span>
+            <span class="browser-dot dot-yellow"></span>
+            <span class="browser-dot dot-green"></span>
+            <span class="browser-url"><i class="fa-solid fa-lock"></i>app.prepmed.in/dashboard</span>
+          </div>
+          <div class="browser-body">
+            <div class="dc-header">
+              <div class="dc-avatar">AS</div>
+              <div>
+                <div class="dc-name">Ayesha Sharma</div>
+                <div class="dc-tag tag-internal">Internal Student</div>
+              </div>
+              <i class="fa-solid fa-bell dc-bell"></i>
+            </div>
+            <div class="dc-stats">
+              <div class="dc-stat">
+                <span class="dc-stat-num" data-count="6">0</span>
+                <span class="dc-stat-label">Exams</span>
+              </div>
+              <div class="dc-stat">
+                <span class="dc-stat-num" data-count="4">0</span>
+                <span class="dc-stat-label">Completed</span>
+              </div>
+              <div class="dc-stat">
+                <span class="dc-stat-num" data-count="200" data-prefix="₹">0</span>
+                <span class="dc-stat-label">Fee / Exam</span>
+              </div>
+            </div>
+            <div class="dc-exam-row">
+              <div class="dc-exam-dot"></div>
+              <div class="dc-exam-info">
+                <div class="dc-exam-name">NEET Pattern Mock — CBT 04</div>
+                <div class="dc-exam-meta">12 Jul 2026 · 09:00 AM</div>
+              </div>
+              <span class="dc-badge">Registered</span>
+            </div>
+          </div>
+        </div>
+        <div class="floaty-card mini-card mini-card-1">
+          <i class="fa-solid fa-circle-check"></i> Payment Successful
+        </div>
+        <div class="floaty-card mini-card mini-card-2">
+          <i class="fa-solid fa-chart-line"></i> Result Published
+        </div>
+      </div>
+    </div>
+
+    <a href="#stats" class="scroll-indicator reveal">
+      <span>Scroll</span>
+      <i class="fa-solid fa-chevron-down"></i>
+    </a>
+  </section>
+
+  <!-- ===================== STATS STRIP ===================== -->
+  <section id="stats" class="stats-strip">
+    <div class="container stats-grid">
+      <div class="stat-item reveal">
+        <span class="stat-num" data-count="12500" data-suffix="+">0</span>
+        <span class="stat-label">Students Registered</span>
+      </div>
+      <div class="stat-item reveal">
+        <span class="stat-num" data-count="86" data-suffix="+">0</span>
+        <span class="stat-label">CBT Exams Conducted</span>
+      </div>
+      <div class="stat-item reveal">
+        <span class="stat-num" data-count="99" data-suffix="%">0</span>
+        <span class="stat-label">On-time Result Delivery</span>
+      </div>
+      <div class="stat-item reveal">
+        <span class="stat-num" data-count="24" data-suffix="/7">0</span>
+        <span class="stat-label">Portal Availability</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FEATURES ===================== -->
+  <section id="features" class="features">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow reveal">Why PrepMed</span>
+        <h2 class="section-title reveal">Everything you need for CBT exams, in one place</h2>
+        <p class="section-sub reveal">From registration to results — a portal designed to be fast, transparent and stress-free.</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card reveal">
+          <div class="feature-icon"><i class="fa-solid fa-user-check"></i></div>
+          <h3>Internal &amp; External Access</h3>
+          <p>Separate, secure login flows for enrolled internal students and external aspirants.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon"><i class="fa-solid fa-indian-rupee-sign"></i></div>
+          <h3>Transparent Fees</h3>
+          <p>Clear, category-based exam pricing — ₹200 for internal students, ₹360 for external students.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon"><i class="fa-solid fa-lock"></i></div>
+          <h3>Secure Payments</h3>
+          <p>Encrypted, PCI-ready checkout for every exam fee payment with instant confirmation.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon"><i class="fa-solid fa-list-check"></i></div>
+          <h3>One-click Exam Registration</h3>
+          <p>Browse every available CBT exam and register in seconds, right after payment.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon"><i class="fa-solid fa-gauge-high"></i></div>
+          <h3>Live Student Dashboard</h3>
+          <p>Track registered exams, payment history and upcoming schedules from a single dashboard.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon"><i class="fa-solid fa-chart-simple"></i></div>
+          <h3>Instant Results</h3>
+          <p>View detailed, exam-wise results the moment they're published — no waiting, no queues.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FEES ===================== -->
+  <section id="fees" class="fees">
+    <div class="hero-blob blob-4" data-speed="0.12"></div>
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow reveal">Exam Fee Structure</span>
+        <h2 class="section-title reveal">Simple, category-based pricing</h2>
+        <p class="section-sub reveal">One flat fee per CBT exam, based on your student category.</p>
+      </div>
+
+      <div class="pricing-grid">
+        <div class="price-card reveal">
+          <div class="price-badge">For Enrolled Students</div>
+          <h3 class="price-title"><i class="fa-solid fa-building-columns"></i> Internal Student</h3>
+          <div class="price-amount"><span class="price-currency">₹</span>200<span class="price-per">/ exam</span></div>
+          <ul class="price-list">
+            <li><i class="fa-solid fa-check"></i> Access to all scheduled CBT exams</li>
+            <li><i class="fa-solid fa-check"></i> Instant result access</li>
+            <li><i class="fa-solid fa-check"></i> Priority exam slots</li>
+            <li><i class="fa-solid fa-check"></i> Free re-attempt scheduling support</li>
+          </ul>
+          <a href="#portal" class="btn btn-primary btn-block" data-tab-open="internal-login">Login as Internal</a>
+        </div>
+
+        <div class="price-card price-card-featured reveal">
+          <div class="price-badge price-badge-alt">Open to Everyone</div>
+          <h3 class="price-title"><i class="fa-solid fa-earth-asia"></i> External Student</h3>
+          <div class="price-amount"><span class="price-currency">₹</span>360<span class="price-per">/ exam</span></div>
+          <ul class="price-list">
+            <li><i class="fa-solid fa-check"></i> Access to all scheduled CBT exams</li>
+            <li><i class="fa-solid fa-check"></i> Instant result access</li>
+            <li><i class="fa-solid fa-check"></i> Downloadable score reports</li>
+            <li><i class="fa-solid fa-check"></i> Open registration, no enrollment needed</li>
+          </ul>
+          <a href="#portal" class="btn btn-primary btn-block" data-tab-open="register">Register as External</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PORTAL / LOGIN-REGISTER ===================== -->
+  <section id="portal" class="portal">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow reveal">Student Portal Access</span>
+        <h2 class="section-title reveal">Login or create your account</h2>
+        <p class="section-sub reveal">Choose the option that matches your student category.</p>
+      </div>
+
+      <div class="portal-panel reveal">
+        <div class="tabs" role="tablist">
+          <button class="tab-btn active" data-tab="internal-login">
+            <i class="fa-solid fa-building-columns"></i> Internal Login
+          </button>
+          <button class="tab-btn" data-tab="external-login">
+            <i class="fa-solid fa-earth-asia"></i> External Login
+          </button>
+          <button class="tab-btn" data-tab="register">
+            <i class="fa-solid fa-user-plus"></i> External Registration
+          </button>
+        </div>
+
+        <div class="tab-panels">
+          <!-- Internal login -->
+          <form class="tab-panel active" data-panel="internal-login" novalidate>
+            <p class="panel-note"><i class="fa-solid fa-circle-info"></i> For students already enrolled with PrepMed. Exam fee: <strong>₹200</strong> per exam.</p>
+            <div class="form-row">
+              <label>Enrollment ID</label>
+              <input type="text" placeholder="e.g. PMI-2026-0452" required />
+            </div>
+            <div class="form-row">
+              <label>Password</label>
+              <input type="password" placeholder="Enter your password" required />
+            </div>
+            <div class="form-meta">
+              <label class="checkbox"><input type="checkbox" /> Remember me</label>
+              <a href="#">Forgot password?</a>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">
+              <i class="fa-solid fa-right-to-bracket"></i> Login as Internal Student
+            </button>
+          </form>
+
+          <!-- External login -->
+          <form class="tab-panel" data-panel="external-login" novalidate>
+            <p class="panel-note"><i class="fa-solid fa-circle-info"></i> For external aspirants. Exam fee: <strong>₹360</strong> per exam.</p>
+            <div class="form-row">
+              <label>Email Address</label>
+              <input type="email" placeholder="you@example.com" required />
+            </div>
+            <div class="form-row">
+              <label>Password</label>
+              <input type="password" placeholder="Enter your password" required />
+            </div>
+            <div class="form-meta">
+              <label class="checkbox"><input type="checkbox" /> Remember me</label>
+              <a href="#">Forgot password?</a>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">
+              <i class="fa-solid fa-right-to-bracket"></i> Login as External Student
+            </button>
+            <p class="panel-switch">New here? <a href="#" data-tab-open="register">Create an external account</a></p>
+          </form>
+
+          <!-- Register -->
+          <form class="tab-panel" data-panel="register" novalidate>
+            <p class="panel-note"><i class="fa-solid fa-circle-info"></i> Create a free external student account. Exam fee: <strong>₹360</strong> per exam.</p>
+            <div class="form-grid">
+              <div class="form-row">
+                <label>Full Name</label>
+                <input type="text" placeholder="Full name" required />
+              </div>
+              <div class="form-row">
+                <label>Phone Number</label>
+                <input type="tel" placeholder="+91 00000 00000" required />
+              </div>
+              <div class="form-row">
+                <label>Email Address</label>
+                <input type="email" placeholder="you@example.com" required />
+              </div>
+              <div class="form-row">
+                <label>Date of Birth</label>
+                <input type="date" required />
+              </div>
+              <div class="form-row">
+                <label>Password</label>
+                <input type="password" placeholder="Create a password" required />
+              </div>
+              <div class="form-row">
+                <label>Confirm Password</label>
+                <input type="password" placeholder="Re-enter password" required />
+              </div>
+            </div>
+            <label class="checkbox"><input type="checkbox" required /> I agree to the Terms &amp; Privacy Policy</label>
+            <button type="submit" class="btn btn-primary btn-block">
+              <i class="fa-solid fa-user-plus"></i> Create External Account
+            </button>
+            <p class="panel-switch">Already registered? <a href="#" data-tab-open="external-login">Login instead</a></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== DASHBOARD PREVIEW ===================== -->
+  <section class="dash-preview">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow reveal">After You Log In</span>
+        <h2 class="section-title reveal">A dashboard that keeps you in control</h2>
+        <p class="section-sub reveal">See your profile, category-based fee, registered exams and results at a glance.</p>
+      </div>
+
+      <div class="dash-mock browser-frame reveal">
+        <div class="browser-bar">
+          <span class="browser-dot dot-red"></span>
+          <span class="browser-dot dot-yellow"></span>
+          <span class="browser-dot dot-green"></span>
+          <span class="browser-url"><i class="fa-solid fa-lock"></i>app.prepmed.in/student/overview</span>
+        </div>
+        <div class="browser-body dash-body">
+          <div class="dash-sidebar">
+            <div class="dash-profile">
+              <div class="dash-avatar">RK</div>
+              <div class="dash-name">Rahul Kumar</div>
+              <span class="dc-tag tag-external">External Student</span>
+            </div>
+            <nav class="dash-nav">
+              <a class="active"><i class="fa-solid fa-gauge-high"></i> Overview</a>
+              <a><i class="fa-solid fa-list-check"></i> My Exams</a>
+              <a><i class="fa-solid fa-credit-card"></i> Payments</a>
+              <a><i class="fa-solid fa-chart-simple"></i> Results</a>
+              <a><i class="fa-solid fa-gear"></i> Profile Settings</a>
+            </nav>
+          </div>
+          <div class="dash-main">
+            <div class="dash-cards">
+              <div class="dash-card">
+                <span class="dash-card-label">Exam Fee</span>
+                <span class="dash-card-value">₹360</span>
+              </div>
+              <div class="dash-card">
+                <span class="dash-card-label">Registered Exams</span>
+                <span class="dash-card-value" data-count="5">0</span>
+              </div>
+              <div class="dash-card">
+                <span class="dash-card-label">Results Available</span>
+                <span class="dash-card-value" data-count="3">0</span>
+              </div>
+            </div>
+            <div class="dash-list">
+              <div class="dash-list-row">
+                <div class="dl-info">
+                  <strong>Biology Foundation — CBT 02</strong>
+                  <span>Attempted · 20 Jun 2026</span>
+                </div>
+                <span class="dc-badge dc-badge-green">Result Ready</span>
+              </div>
+              <div class="dash-list-row">
+                <div class="dl-info">
+                  <strong>Physics Speed Test — CBT 05</strong>
+                  <span>Upcoming · 18 Jul 2026</span>
+                </div>
+                <span class="dc-badge">Registered</span>
+              </div>
+              <div class="dash-list-row">
+                <div class="dl-info">
+                  <strong>Chemistry Full Mock — CBT 06</strong>
+                  <span>Payment pending</span>
+                </div>
+                <span class="dc-badge dc-badge-orange">Pay Now</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== EXAMS ===================== -->
+  <section id="exams" class="exams">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow reveal">Available CBT Exams</span>
+        <h2 class="section-title reveal">Pay and register for upcoming exams</h2>
+        <p class="section-sub reveal">Fee shown updates instantly based on your student category.</p>
+      </div>
+
+      <div class="category-toggle reveal">
+        <span class="ct-label ct-label-left">Internal · ₹200</span>
+        <button class="ct-switch" id="categoryToggle" aria-label="Toggle student category">
+          <span class="ct-knob"></span>
+        </button>
+        <span class="ct-label ct-label-right">External · ₹360</span>
+      </div>
+
+      <div class="exam-grid">
+        <div class="exam-card reveal">
+          <div class="exam-card-top">
+            <span class="exam-subject">NEET-UG Pattern</span>
+            <span class="dc-badge">Upcoming</span>
+          </div>
+          <h3>Full Length Mock — CBT 07</h3>
+          <div class="exam-meta"><i class="fa-solid fa-calendar-days"></i> 14 Jul 2026 <i class="fa-solid fa-clock"></i> 09:00 AM · 3 hrs</div>
+          <div class="exam-foot">
+            <span class="exam-fee">₹<span class="fee-amount">200</span></span>
+            <button class="btn btn-primary btn-sm">Pay &amp; Register</button>
+          </div>
+        </div>
+
+        <div class="exam-card reveal">
+          <div class="exam-card-top">
+            <span class="exam-subject">Physics</span>
+            <span class="dc-badge">Upcoming</span>
+          </div>
+          <h3>Speed Test — CBT 08</h3>
+          <div class="exam-meta"><i class="fa-solid fa-calendar-days"></i> 18 Jul 2026 <i class="fa-solid fa-clock"></i> 11:00 AM · 1 hr</div>
+          <div class="exam-foot">
+            <span class="exam-fee">₹<span class="fee-amount">200</span></span>
+            <button class="btn btn-primary btn-sm">Pay &amp; Register</button>
+          </div>
+        </div>
+
+        <div class="exam-card reveal">
+          <div class="exam-card-top">
+            <span class="exam-subject">Chemistry</span>
+            <span class="dc-badge dc-badge-orange">Fee Pending</span>
+          </div>
+          <h3>Organic Chemistry — CBT 06</h3>
+          <div class="exam-meta"><i class="fa-solid fa-calendar-days"></i> 20 Jul 2026 <i class="fa-solid fa-clock"></i> 10:00 AM · 2 hrs</div>
+          <div class="exam-foot">
+            <span class="exam-fee">₹<span class="fee-amount">200</span></span>
+            <button class="btn btn-primary btn-sm">Pay &amp; Register</button>
+          </div>
+        </div>
+
+        <div class="exam-card reveal">
+          <div class="exam-card-top">
+            <span class="exam-subject">Biology</span>
+            <span class="dc-badge dc-badge-green">Result Ready</span>
+          </div>
+          <h3>Foundation Test — CBT 02</h3>
+          <div class="exam-meta"><i class="fa-solid fa-calendar-days"></i> 20 Jun 2026 <i class="fa-solid fa-clock"></i> Completed</div>
+          <div class="exam-foot">
+            <span class="exam-fee exam-fee-done"><i class="fa-solid fa-check"></i> Paid</span>
+            <button class="btn btn-outline btn-sm">View Result</button>
+          </div>
+        </div>
+
+        <div class="exam-card reveal">
+          <div class="exam-card-top">
+            <span class="exam-subject">General Science</span>
+            <span class="dc-badge">Upcoming</span>
+          </div>
+          <h3>Mixed Topics — CBT 09</h3>
+          <div class="exam-meta"><i class="fa-solid fa-calendar-days"></i> 25 Jul 2026 <i class="fa-solid fa-clock"></i> 09:30 AM · 2.5 hrs</div>
+          <div class="exam-foot">
+            <span class="exam-fee">₹<span class="fee-amount">200</span></span>
+            <button class="btn btn-primary btn-sm">Pay &amp; Register</button>
+          </div>
+        </div>
+
+        <div class="exam-card reveal">
+          <div class="exam-card-top">
+            <span class="exam-subject">NEET-UG Pattern</span>
+            <span class="dc-badge dc-badge-green">Result Ready</span>
+          </div>
+          <h3>Full Length Mock — CBT 04</h3>
+          <div class="exam-meta"><i class="fa-solid fa-calendar-days"></i> 12 Jun 2026 <i class="fa-solid fa-clock"></i> Completed</div>
+          <div class="exam-foot">
+            <span class="exam-fee exam-fee-done"><i class="fa-solid fa-check"></i> Paid</span>
+            <button class="btn btn-outline btn-sm">View Result</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== RESULTS ===================== -->
+  <section id="results" class="results">
+    <div class="hero-blob blob-5" data-speed="0.1"></div>
+    <div class="container results-inner">
+      <div class="section-head section-head-left">
+        <span class="eyebrow reveal">Exam Results</span>
+        <h2 class="section-title reveal">Your performance, the moment it's ready</h2>
+        <p class="section-sub reveal">
+          Every CBT exam result is broken down subject-wise, with your score, accuracy
+          and rank — available instantly on your dashboard.
+        </p>
+        <ul class="result-points reveal">
+          <li><i class="fa-solid fa-check"></i> Subject-wise score breakdown</li>
+          <li><i class="fa-solid fa-check"></i> Accuracy &amp; time analysis</li>
+          <li><i class="fa-solid fa-check"></i> Downloadable score report (PDF)</li>
+        </ul>
+        <a href="#exams" class="btn btn-outline">Browse Exams <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+
+      <div class="result-card reveal">
+        <div class="result-card-head">
+          <div>
+            <h3>NEET-UG Full Length Mock</h3>
+            <span>CBT 04 · Attempted 12 Jun 2026</span>
+          </div>
+          <span class="dc-badge dc-badge-green">Published</span>
+        </div>
+
+        <div class="result-score">
+          <svg class="score-ring" viewBox="0 0 120 120">
+            <circle class="score-ring-bg" cx="60" cy="60" r="52"></circle>
+            <circle class="score-ring-fg" cx="60" cy="60" r="52" data-progress="82"></circle>
+          </svg>
+          <div class="score-ring-label">
+            <span class="score-num">82%</span>
+            <span>Score</span>
+          </div>
+        </div>
+
+        <div class="result-breakdown">
+          <div class="rb-row"><span>Physics</span><div class="rb-bar"><div style="width:78%"></div></div><span>78%</span></div>
+          <div class="rb-row"><span>Chemistry</span><div class="rb-bar"><div style="width:84%"></div></div><span>84%</span></div>
+          <div class="rb-row"><span>Biology</span><div class="rb-bar"><div style="width:86%"></div></div><span>86%</span></div>
+        </div>
+
+        <button class="btn btn-primary btn-block"><i class="fa-solid fa-download"></i> Download Report</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA BANNER ===================== -->
+  <section class="cta-banner">
+    <div class="container cta-inner reveal">
+      <h2>Ready to take your next CBT exam?</h2>
+      <p>Login or register in under a minute and get exam-ready today.</p>
+      <div class="cta-actions">
+        <a href="#portal" class="btn btn-light btn-lg" data-tab-open="internal-login">Internal Student Login</a>
+        <a href="#portal" class="btn btn-outline-light btn-lg" data-tab-open="register">External Student Registration</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <img src="assets/logo.webp" alt="PrepMed logo" class="logo-img footer-logo-img"/>
+      <p>Education Beyond Barrier. The trusted CBT exam registration portal for medical aspirants.</p>
+      <div class="footer-social">
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="#home">Home</a>
+      <a href="#features">Features</a>
+      <a href="#fees">Fee Structure</a>
+      <a href="#exams">Exams</a>
+    </div>
+    <div class="footer-col">
+      <h4>Portal</h4>
+      <a href="#portal" data-tab-open="internal-login">Internal Login</a>
+      <a href="#portal" data-tab-open="external-login">External Login</a>
+      <a href="#portal" data-tab-open="register">External Registration</a>
+      <a href="#results">Results</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <a><i class="fa-solid fa-envelope"></i> info@prepmed.in</a>
+      <a><i class="fa-solid fa-phone"></i> +91 90000 00000</a>
+      <a><i class="fa-solid fa-location-dot"></i> New Delhi, India</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <span>&copy; <span id="year"></span> PrepMed. All rights reserved.</span>
+      <span>Education Beyond Barrier</span>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast"><i class="fa-solid fa-circle-info"></i> <span id="toastMsg"></span></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

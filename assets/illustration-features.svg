@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 420" role="img" aria-label="PrepMed feature checklist illustration">
+  <defs>
+    <linearGradient id="fTeal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3fc0bb"/>
+      <stop offset="100%" stop-color="#0f6664"/>
+    </linearGradient>
+    <linearGradient id="fOrange" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ff8c4d"/>
+      <stop offset="100%" stop-color="#e85d1a"/>
+    </linearGradient>
+  </defs>
+
+  <circle cx="120" cy="110" r="150" fill="#d7f3f1" opacity="0.55"/>
+  <circle cx="430" cy="340" r="110" fill="#ff8c4d" opacity="0.14"/>
+
+  <!-- main checklist card -->
+  <g transform="translate(60,70)">
+    <rect x="0" y="0" width="300" height="290" rx="26" fill="#ffffff" stroke="#dcefec" stroke-width="2"/>
+
+    <circle cx="38" cy="42" r="16" fill="url(#fTeal)"/>
+    <path d="M31 42 l5 5 l10 -10" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="64" y="34" width="150" height="10" rx="5" fill="#0d4f4d"/>
+    <rect x="64" y="52" width="100" height="8" rx="4" fill="#dcefec"/>
+
+    <!-- rows -->
+    <g transform="translate(28,100)">
+      <circle cx="14" cy="14" r="14" fill="#fff1e8"/>
+      <path d="M8 14 l4 4 l8 -8" fill="none" stroke="#e85d1a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="42" y="6" width="190" height="9" rx="4.5" fill="#0a2323" opacity="0.82"/>
+      <rect x="42" y="22" width="130" height="7" rx="3.5" fill="#dcefec"/>
+    </g>
+
+    <g transform="translate(28,158)">
+      <circle cx="14" cy="14" r="14" fill="#eefbfa"/>
+      <path d="M8 14 l4 4 l8 -8" fill="none" stroke="#16a19d" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="42" y="6" width="170" height="9" rx="4.5" fill="#0a2323" opacity="0.82"/>
+      <rect x="42" y="22" width="150" height="7" rx="3.5" fill="#dcefec"/>
+    </g>
+
+    <g transform="translate(28,216)">
+      <circle cx="14" cy="14" r="14" fill="#fff1e8"/>
+      <path d="M8 14 l4 4 l8 -8" fill="none" stroke="#e85d1a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="42" y="6" width="200" height="9" rx="4.5" fill="#0a2323" opacity="0.82"/>
+      <rect x="42" y="22" width="110" height="7" rx="3.5" fill="#dcefec"/>
+    </g>
+  </g>
+
+  <!-- floating shield badge: Secure -->
+  <g transform="translate(368,26)">
+    <rect x="0" y="0" width="96" height="96" rx="24" fill="url(#fOrange)"/>
+    <path d="M48 20 l24 9 v18 c0 18 -10 30 -24 37 c-14 -7 -24 -19 -24 -37 v-18 z" fill="none" stroke="#ffffff" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M38 49 l8 8 l16 -18" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- floating chart badge: Live dashboard -->
+  <g transform="translate(10,300)">
+    <rect x="0" y="0" width="118" height="92" rx="20" fill="#ffffff" stroke="#dcefec" stroke-width="2"/>
+    <rect x="20" y="46" width="16" height="30" rx="4" fill="#d7f3f1"/>
+    <rect x="44" y="30" width="16" height="46" rx="4" fill="url(#fTeal)"/>
+    <rect x="68" y="18" width="16" height="58" rx="4" fill="url(#fOrange)"/>
+    <rect x="20" y="20" width="64" height="8" rx="4" fill="#0d4f4d" opacity="0.7"/>
+  </g>
+</svg>

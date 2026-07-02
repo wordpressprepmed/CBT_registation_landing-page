@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 420" role="img" aria-label="PrepMed exam fee structure illustration">
+  <defs>
+    <linearGradient id="pTeal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3fc0bb"/>
+      <stop offset="100%" stop-color="#0f6664"/>
+    </linearGradient>
+    <linearGradient id="pOrange" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ff8c4d"/>
+      <stop offset="100%" stop-color="#e85d1a"/>
+    </linearGradient>
+  </defs>
+
+  <circle cx="410" cy="90" r="140" fill="#ff8c4d" opacity="0.13"/>
+  <circle cx="100" cy="340" r="120" fill="#d7f3f1" opacity="0.55"/>
+
+  <!-- invoice card -->
+  <g transform="translate(90,54)">
+    <rect x="0" y="0" width="280" height="300" rx="26" fill="#ffffff" stroke="#dcefec" stroke-width="2"/>
+
+    <circle cx="42" cy="46" r="20" fill="url(#pTeal)"/>
+    <text x="42" y="54" text-anchor="middle" font-family="'Sora','Segoe UI',Arial,sans-serif" font-weight="800" font-size="20" fill="#ffffff">&#8377;</text>
+    <rect x="76" y="34" width="140" height="10" rx="5" fill="#0d4f4d"/>
+    <rect x="76" y="52" width="90" height="8" rx="4" fill="#dcefec"/>
+
+    <line x1="24" y1="92" x2="256" y2="92" stroke="#dcefec" stroke-width="2" stroke-dasharray="4 6"/>
+
+    <!-- internal row -->
+    <g transform="translate(24,112)">
+      <rect x="0" y="0" width="232" height="56" rx="14" fill="#eefbfa"/>
+      <rect x="18" y="18" width="12" height="20" rx="6" fill="url(#pTeal)"/>
+      <text x="40" y="34" font-family="'Sora','Segoe UI',Arial,sans-serif" font-weight="700" font-size="15" fill="#0d4f4d">Internal Student</text>
+      <text x="212" y="35" text-anchor="end" font-family="'Sora','Segoe UI',Arial,sans-serif" font-weight="800" font-size="18" fill="#0f6664">&#8377;200</text>
+    </g>
+
+    <!-- external row -->
+    <g transform="translate(24,180)">
+      <rect x="0" y="0" width="232" height="56" rx="14" fill="#fff5ee"/>
+      <rect x="18" y="18" width="12" height="20" rx="6" fill="url(#pOrange)"/>
+      <text x="40" y="34" font-family="'Sora','Segoe UI',Arial,sans-serif" font-weight="700" font-size="15" fill="#7a3a12">External Student</text>
+      <text x="212" y="35" text-anchor="end" font-family="'Sora','Segoe UI',Arial,sans-serif" font-weight="800" font-size="18" fill="#e85d1a">&#8377;360</text>
+    </g>
+
+    <g transform="translate(24,254)">
+      <circle cx="10" cy="10" r="10" fill="#eefbfa"/>
+      <path d="M5 10 l3.5 3.5 l7 -7" fill="none" stroke="#16a19d" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="28" y="14" font-family="'Sora','Segoe UI',Arial,sans-serif" font-weight="600" font-size="13" fill="#4d6a69">Instant payment confirmation</text>
+    </g>
+  </g>
+
+  <!-- floating card-payment badge -->
+  <g transform="translate(340,300)">
+    <rect x="0" y="0" width="110" height="76" rx="18" fill="url(#pTeal)"/>
+    <rect x="14" y="18" width="82" height="16" rx="4" fill="#ffffff" opacity="0.9"/>
+    <rect x="14" y="42" width="40" height="8" rx="4" fill="#ffffff" opacity="0.6"/>
+    <rect x="62" y="42" width="24" height="8" rx="4" fill="#ffffff" opacity="0.6"/>
+  </g>
+
+  <!-- floating coin badge -->
+  <g transform="translate(30,20)">
+    <circle cx="34" cy="34" r="34" fill="url(#pOrange)"/>
+    <text x="34" y="44" text-anchor="middle" font-family="'Sora','Segoe UI',Arial,sans-serif" font-weight="800" font-size="30" fill="#ffffff">&#8377;</text>
+  </g>
+</svg>
