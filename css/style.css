@@ -14,9 +14,11 @@
   --teal-100: #d0eff8;
   --teal-50:  #e7f7ff;
 
-  --orange-600: #e85d1a;
-  --orange-500: #ff6f2c;
-  --orange-400: #ff8c4d;
+  /* Former orange accent — now unified to the brand teal (#0F9DA4) per request.
+     Names kept as-is since dozens of rules reference them; only the values moved. */
+  --orange-600: #08626b;
+  --orange-500: #0f9da4;
+  --orange-400: #38bcc2;
 
   --ink: #0a2323;
   --muted: #4d6a69;
@@ -28,7 +30,6 @@
   --shadow-md: 0 14px 34px rgba(2, 30, 34, 0.12);
   --shadow-lg: 0 28px 70px rgba(2, 30, 34, 0.18);
   --shadow-glow: 0 10px 26px rgba(15, 157, 164, 0.28);
-  --shadow-glow-orange: 0 10px 26px rgba(255, 111, 44, 0.3);
 
   --radius-sm: 10px;
   --radius-md: 18px;
@@ -289,7 +290,7 @@ button { font-family: inherit; border: none; background: none; cursor: pointer; 
 .trust-item i { color: var(--orange-500); }
 
 /* Hero visual mockup */
-.hero-visual { position: relative; height: 460px; }
+.hero-visual { position: relative; height: 460px; perspective: 1600px; }
 .floaty-card {
   position: absolute;
   background: #fff;
@@ -345,7 +346,7 @@ button { font-family: inherit; border: none; background: none; cursor: pointer; 
 .dc-name { font-family: var(--font-head); font-weight: 700; font-size: 0.98rem; }
 .dc-tag { display: inline-block; font-size: 0.7rem; font-weight: 700; padding: 2px 10px; border-radius: 999px; margin-top: 3px; }
 .tag-internal { background: var(--teal-50); color: var(--teal-700); }
-.tag-external { background: #fff1e8; color: var(--orange-600); }
+.tag-external { background: var(--teal-100); color: var(--orange-600); }
 .dc-bell { margin-left: auto; color: var(--muted); }
 .dc-stats { display: flex; justify-content: space-between; padding: 18px 0; border-top: 1px dashed var(--border); border-bottom: 1px dashed var(--border); margin-bottom: 18px; }
 .dc-stat { display: flex; flex-direction: column; align-items: center; gap: 4px; }
@@ -358,7 +359,7 @@ button { font-family: inherit; border: none; background: none; cursor: pointer; 
 .dc-exam-meta { font-size: 0.72rem; color: var(--muted); }
 .dc-badge { font-size: 0.7rem; font-weight: 700; padding: 4px 11px; border-radius: 999px; background: var(--teal-100); color: var(--teal-700); white-space: nowrap; }
 .dc-badge-green { background: #e3f8ec; color: #0f9d58; }
-.dc-badge-orange { background: #fff1e2; color: var(--orange-600); }
+.dc-badge-orange { background: var(--teal-100); color: var(--orange-600); }
 
 .mini-card {
   padding: 12px 18px;
@@ -368,6 +369,7 @@ button { font-family: inherit; border: none; background: none; cursor: pointer; 
   align-items: center;
   gap: 8px;
   color: var(--teal-700);
+  transform: translateZ(60px);
 }
 .mini-card i { color: #0f9d58; }
 .mini-card-1 { top: 0; right: 0; }
@@ -746,7 +748,10 @@ button { font-family: inherit; border: none; background: none; cursor: pointer; 
     position: fixed;
     top: 0; right: -100%;
     width: 78%; max-width: 320px; height: 100vh;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.62);
+    backdrop-filter: blur(22px) saturate(160%);
+    -webkit-backdrop-filter: blur(22px) saturate(160%);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
     flex-direction: column;
     align-items: flex-start;
     padding: 100px 32px 32px;

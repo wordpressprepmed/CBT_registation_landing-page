@@ -258,6 +258,50 @@ document.addEventListener('DOMContentLoaded', () => {
   gsap.to('.mini-card-2', { y: -10, duration: 3, ease: 'sine.inOut', repeat: -1, yoyo: true, delay: 0.6 });
 
   /* ------------------------------------------------------------------ *
+   * 3D tilt — cards and product mockups rotate toward the cursor.
+   * Perspective is set per-element (transformPerspective), so each tilts
+   * independently without needing a shared parent perspective wrapper.
+   * `lift`/`scale` are opt-in per call so this never fights with elements
+   * that already have their own GSAP animation on `y` (e.g. .dashboard-card
+   * floats continuously above — tilt on it only ever touches rotation).
+   * ------------------------------------------------------------------ */
+  function enableTilt(selector, { max = 8, scale = 1, lift = 0, baseX = 0, baseY = 0 } = {}) {
+    document.querySelectorAll(selector).forEach((el) => {
+      gsap.set(el, { transformPerspective: 800, transformStyle: 'preserve-3d', rotationX: baseX, rotationY: baseY });
+      const rotX = gsap.quickTo(el, 'rotationX', { duration: 0.5, ease: 'power2.out' });
+      const rotY = gsap.quickTo(el, 'rotationY', { duration: 0.5, ease: 'power2.out' });
+      const rise = lift ? gsap.quickTo(el, 'y', { duration: 0.5, ease: 'power2.out' }) : null;
+      const zoom = scale !== 1 ? gsap.quickTo(el, 'scale', { duration: 0.5, ease: 'power2.out' }) : null;
+
+      el.addEventListener('mousemove', (e) => {
+        const rect = el.getBoundingClientRect();
+        const px = (e.clientX - rect.left) / rect.width - 0.5;
+        const py = (e.clientY - rect.top) / rect.height - 0.5;
+        rotY(baseY + px * max);
+        rotX(baseX - py * max);
+      });
+      el.addEventListener('mouseenter', () => {
+        rise?.(-lift);
+        zoom?.(scale);
+      });
+      el.addEventListener('mouseleave', () => {
+        rotX(baseX);
+        rotY(baseY);
+        rise?.(0);
+        zoom?.(1);
+      });
+    });
+  }
+
+  if (!window.matchMedia('(hover: none), (pointer: coarse)').matches) {
+    enableTilt('.dashboard-card', { max: 10, baseX: 4, baseY: -8 });
+    enableTilt('.dash-mock', { max: 4 });
+    enableTilt('.feature-card', { max: 7, lift: 6 });
+    enableTilt('.exam-card', { max: 7, lift: 5 });
+    enableTilt('.price-card', { max: 5, lift: 6, scale: 1.015 });
+  }
+
+  /* ------------------------------------------------------------------ *
    * Parallax blobs — mousemove + scroll
    * ------------------------------------------------------------------ */
   const blobs = gsap.utils.toArray('.hero-blob');
